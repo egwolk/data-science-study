@@ -1,12 +1,16 @@
 import os
 
-def read_file():
+def read_file(filename):
     try:
-        with open("text.txt", "r") as file:
+        with open(filename, "r") as file:
             content = file.read()
             print(content)
     except:
         print("file does not exist")
+
+def input_file_name():
+    file = input("Enter file name: ")
+    return file + ".txt"
 
 def write_file():
     pass
@@ -30,7 +34,8 @@ while True:
     user_input = input("Your choice: ")
     match user_input:
         case "1":
-            read_file()
+            file = input_file_name()
+            read_file(file)
             break
         case "2":
             break
