@@ -1,4 +1,4 @@
-import os
+import os, sys
 
 def read_file(filename):
     try:
@@ -29,6 +29,7 @@ What would you like to do?
 [3] Add data to a file
 [4] Rename a file 
 [5] Delete a file
+[6] Exit
 """)
 while True:
     user_input = input("Your choice: ")
@@ -45,6 +46,8 @@ while True:
             break
         case "5":
             break
+        case "6":
+            sys.exit("bye bye")
         case _:
             print("invalid input. try again")
 
