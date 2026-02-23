@@ -1,7 +1,13 @@
+import os
+
 def read_file():
-    with open("test.txt", "r") as file:
-        content = file.read()
-        print(content)
+    try:
+        with open("text.txt", "r") as file:
+            content = file.read()
+            print(content)
+    except:
+        print("file does not exist")
+
 def write_file():
     pass
 def append_file():
