@@ -7,4 +7,5 @@ What would you like to do?
 [4] Rename a file 
 [5] Delete a file
 """)
-input("Your choice: ")
+user_input = input("Your choice: ")
+print(f"You picked {user_input}")
