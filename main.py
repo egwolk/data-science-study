@@ -66,8 +66,15 @@ def file_checker(choice, filename):
         print("file does not exist")
         input("Press enter key to continue...")
 
-def rename_file():
-    pass
+def rename_file(filename):
+    if os.path.exists(filename):
+        os.rename(filename, input_file_name())
+        print("File renamed successfully.")
+        input("Press enter to continue...")
+    else:
+        print("file does not exist")
+        input("Press enter key to continue...")
+
 def delete_file():
     pass
 
@@ -106,6 +113,8 @@ What would you like to do?
                 break
             case "4":
                 clear_console()
+                file = input_file_name()
+                rename_file(file)
                 break
             case "5":
                 clear_console()
