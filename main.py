@@ -1,3 +1,17 @@
+def read_file():
+    with open("test.txt", "r") as file:
+        content = file.read()
+        print(content)
+def write_file():
+    pass
+def append_file():
+    pass
+def rename_file():
+    pass
+def delete_file():
+    pass
+
+
 print("""
 What would you like to do?
 [1] Read a file
@@ -10,6 +24,7 @@ while True:
     user_input = input("Your choice: ")
     match user_input:
         case "1":
+            read_file()
             break
         case "2":
             break
