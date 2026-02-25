@@ -26,7 +26,7 @@ This project was developed for educational purposes to demonstrate fundamental f
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/egwolk/data-science-study.git
+   git clone https://github.com/egwolk/python-txt-file-management.git
    cd data-science-study
    ```
 
@@ -63,7 +63,7 @@ This project was developed for educational purposes to demonstrate fundamental f
 
 ### Installing Pre-built Executable (Windows)
 
-1. Go to the [Releases](https://github.com/egwolk/data-science-study/releases) page
+1. Go to the [Releases](https://github.com/egwolk/python-txt-file-management/releases) page
 2. Download `Text File Manager.exe`
 3. Double-click to run, or open Command Prompt and run:
    ```cmd
@@ -105,10 +105,11 @@ data-science-study/
 - No external dependencies for running from source
 - PyInstaller required only for building executables
 
+---
 ## License
 
 This project is for educational purposes.
 
 ## Author
 
-[egwolk](https://github.com/egwolk)
+made with 💗 [@egwolk](https://github.com/egwolk)
