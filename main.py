@@ -8,7 +8,9 @@ def read_file(filename):
             input("Press enter key to continue...")
 
 def input_file_name(prompt="Enter txt file name: "):
-    file = input(prompt)
+    file = input(prompt).strip()
+    if file.endswith(".txt"):
+        return file
     return file + ".txt"
 
 def write_file(filename):
