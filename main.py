@@ -71,27 +71,21 @@ def file_checker(choice, filename):
                 contents = read_file(filename)
                 display_file(filename, contents)
             case "3": append_file(filename)
+            case "4": rename_file(filename)
+            case "5":delete_file(filename)
     except:
         print("file does not exist")
         input("Press enter key to continue...")
 
 def rename_file(filename):
-    if os.path.exists(filename):
-        os.rename(filename, input_file_name(prompt="Enter new file name: "))
-        print("File renamed successfully.")
-        input("Press enter to continue...")
-    else:
-        print("file does not exist")
-        input("Press enter key to continue...")
+    os.rename(filename, input_file_name(prompt="Enter new file name: "))
+    print("File renamed successfully.")
+    input("Press enter to continue...")
 
 def delete_file(filename):
-    if os.path.exists(filename):
-        os.remove(filename)
-        print("File removed successfully.")
-        input("Press enter to continue...")
-    else:
-        print("file does not exist")
-        input("Press enter key to continue...")
+    os.remove(filename)
+    print("File removed successfully.")
+    input("Press enter to continue...")
 
 def clear_console():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -130,12 +124,12 @@ def user_operation():
             case "4":
                 clear_console()
                 file = input_file_name()
-                rename_file(file)
+                file_checker(user_input, file)
                 break
             case "5":
                 clear_console()
                 file = input_file_name()
-                delete_file(file)
+                file_checker(user_input, file)
                 break
             case "6":
                 clear_console()
