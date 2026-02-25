@@ -44,8 +44,9 @@ What would you like to do?
         return content
     
     def confirm_overwrite(self, filename):
-        print(f"File with name {filename} already exists.\nOverwrite file?")
         while True:
+            self.clear_console()
+            print(f"File with name {filename} already exists.\nOverwrite file?")
             yn = input("Y|N: ").lower().strip()
             match yn:
                 case "y":
@@ -56,6 +57,7 @@ What would you like to do?
                     return False
                 case _:
                     print("invalid input. Try again")
+                    input("Press enter key to continue...")
     
     def handle_read_file(self):
         self.clear_console()
